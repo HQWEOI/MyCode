@@ -1,0 +1,39 @@
+package Practice_11_30;
+
+import java.util.regex.Pattern;
+
+import org.junit.Test;
+
+public class RegularDemo {
+	@Test
+	public void testMatch() {
+		//dnfgiufgh@gmail.com 470757517@qq.com.cn
+		String regex = "[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+";
+		String mail = "dsahjgjh98dsa_eyr@esadwq_.com.cn.gov";
+		if(mail.matches(regex)) {
+			System.out.println("是邮箱");
+		}
+		else System.out.println("不是邮箱");
+		
+		if(Pattern.matches(regex, mail)) {
+			System.out.println("是邮箱");
+		}
+	}
+
+	@Test
+	public void testSplit() {
+		// public String[] split(String regex)
+		// 根据匹配给定的正则表达式来拆分此字符串。
+		// 结尾是23的数字字符串来切割
+		// [0-9]+ \d+
+		String regex = "\\d*23";
+		String str = "dhfiher7823hdf23iahAHD3433dfhidh123dhf";
+		String[] splitArray = str.split(regex);
+		for (String string : splitArray) {
+			System.out.println(string);
+		}
+	}
+}
+
+	
+

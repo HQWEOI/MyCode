@@ -1,0 +1,15 @@
+package homeWork_11_27;
+
+public class SmokingBikingTeacher extends Teacher{
+
+	public SmokingBikingTeacher(String name, int age) {
+		super(name, age);
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public void showInfo() {
+		// TODO Auto-generated method stub
+		super.showInfo();
+	}
+
+}

@@ -1,0 +1,85 @@
+package practice_11_23;
+
+import java.util.Scanner;
+
+public class StudentMannerger {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("请输入学生数量");
+		int count = scanner.nextInt();
+		
+		Student[] students = new Student[count];
+		
+		inputStudents(scanner, students);
+		
+		traverseStudents(students);
+		
+		StudentManager(scanner, students);
+	}
+
+	private static void StudentManager(Scanner scanner, Student[] students) {
+		System.out.println("输入1查找学生");
+		System.out.println("输入0退出");
+		
+		int num = scanner.nextInt();
+		
+		switch(num) {
+		
+		case 1:
+			System.out.println("请输入要查找的姓名");
+			String nameSearch = scanner.next();
+			boolean isFoundName = false;
+			for(int i = 0; i < students.length; i++) {
+				if(students[i].name.equals(nameSearch)) {
+					students[i].traverse();
+					isFoundName = true;
+				}
+			}
+			if(isFoundName == false) {
+				System.out.println("没找到该成员");
+			}
+			break;
+		case 0:
+			break;
+		}
+		System.out.println("查找结束");
+	}
+
+	private static void inputStudents(Scanner scanner, Student[] students) {
+		for(int i = 0; i < students.length; i++) {
+			
+			System.out.println("请输入姓名");
+			String name = scanner.next();
+			System.out.println("请输入年龄");
+			int age = scanner.nextInt();
+			System.out.println("请输入性别");
+			String gender = scanner.next();
+			System.out.println("请输入班级");
+			String className = scanner.next();
+			
+			Student Student = new Student(name, age, className, gender);
+			students[i] = Student;
+		}
+	}
+
+	private static void traverseStudents(Student[] students) {
+		for(int i = 0; i < students.length; i++) {
+			students[i].traverse();
+		}
+	}
+
+	private static void SeachByName(Scanner scanner, Student[] students) {
+		System.out.println("请输入要查找的姓名");
+		String nameSearch = scanner.next();
+		boolean isFoundName = false;
+		for(int i = 0; i < students.length; i++) {
+			if(students[i].name.equals(nameSearch)) {
+				students[i].traverse();
+				isFoundName = true;
+			}
+		}
+		if(isFoundName == false) {
+			System.out.println("没找到该成员");
+		}
+	}	
+}

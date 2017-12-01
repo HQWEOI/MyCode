@@ -1,0 +1,22 @@
+package Practice_11_30;
+
+import java.util.regex.Pattern;
+
+import org.junit.Test;
+
+public class RegularDemo {
+	@Test
+	public void testMatch() {
+		//dnfgiufgh@gmail.com 470757517@qq.com.cn
+		String regex = "[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-])+";
+		String mail = "dsahjgjh98dsa_eyr@esadwq_.com.cn.gov";
+		if(mail.matches(regex)) {
+			System.out.println("是邮箱");
+		}
+		else System.out.println("不是邮箱");
+		
+		if(Pattern.matches(regex, mail)) {
+			System.out.println("是邮箱");
+		}
+	}
+}

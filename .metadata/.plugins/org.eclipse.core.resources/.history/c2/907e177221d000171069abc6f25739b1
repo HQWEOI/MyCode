@@ -1,0 +1,19 @@
+package practice_11_23;
+
+public class Student {
+	String name;
+	int age;
+	String className;
+	String gender;
+	
+	Student(String name,int age,String className,String gender) {
+		this.name = name;
+		this.age = age;
+		this.className = className;
+		this.gender = gender;
+	}
+	public void traverse() {
+		System.out.println(name+age+className+gender);
+	}
+
+}

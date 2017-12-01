@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RegularDemo" project="Helloworld" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="Practice_11_30.RegularDemo" time="0.0">
+    <testcase name="testMatch" classname="Practice_11_30.RegularDemo" time="0.0"/>
+    <testcase name="testSplit" classname="Practice_11_30.RegularDemo" time="0.0"/>
+    <testcase name="testReplace" classname="Practice_11_30.RegularDemo" time="0.0"/>
+  </testsuite>
+</testrun>

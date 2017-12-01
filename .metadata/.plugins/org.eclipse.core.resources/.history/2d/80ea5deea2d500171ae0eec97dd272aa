@@ -1,0 +1,25 @@
+package Practice_11_30;
+
+import org.junit.Test;
+
+public class ExceptionDemo {
+	@Test
+	public void test1() {
+		
+		try {
+			int resault = 3/0;
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		System.out.println("dfdfdf");
+	}
+	@Test
+	private void test2() {
+		StringBuffer str = null;
+		char a;
+		a = str.charAt(0);
+	}
+
+}

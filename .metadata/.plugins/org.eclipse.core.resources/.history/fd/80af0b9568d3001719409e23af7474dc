@@ -1,0 +1,9 @@
+package homeWork_11_27;
+
+public class SmokingBikingTeacher extends Teacher{
+
+	public SmokingBikingTeacher(String name, int age) {
+		super(name, age);
+	}
+
+}

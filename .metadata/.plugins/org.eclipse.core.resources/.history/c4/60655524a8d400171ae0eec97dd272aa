@@ -1,0 +1,23 @@
+package Practice_11_29;
+
+public class StringDemo {
+	public static void main(String[] args) {
+		String str1 = new String("abc");
+		String str2 = new String("abc");
+		
+		//比较内容是否相同
+		
+		if(str1.equals(str2)) {
+			System.out.println("equals");
+		}
+		if(str1.equalsIgnoreCase(str2)) {
+			System.out.println("equalsIgnoreCase");
+		}
+		
+		// == 内存地址是不是相等 就是看两个变量是不是在指向堆new出来相同对象
+		
+		if(str1 == str2) {
+			System.out.println("==");
+		}
+	}
+}

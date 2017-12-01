@@ -1,0 +1,10 @@
+package com.situ;
+
+public class person {
+	String name;
+	String sex;
+	int age;
+	public void talk(String name1,String name2) {
+		
+	}
+}

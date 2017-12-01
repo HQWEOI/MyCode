@@ -1,0 +1,57 @@
+package Practice_11_28;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+public class  Practice_1{
+    public Practice_1(int[] num) {
+        Map<Integer, Integer> map = new TreeMap<>();
+        for (int i = 0; i < num.length; i++) {
+            int count = 1;
+            if (num[i] != -1) {
+                for (int j = i + 1; j < num.length; j++) {
+                    if (num[i] == num[j] && num[j] != -1) {
+                        count++;
+                        num[j] = -1;
+                    }
+                }
+                map.put(num[i], count);
+            }
+
+        }
+        ArrayList<Map.Entry<Integer, Integer>> list = new ArrayList<Map.Entry<Integer, Integer>>(map.entrySet());
+        Collections.sort(list, new Comparator<Map.Entry<Integer<Map.Entry<Integer, Integer>>() {
+            @Override
+            public int compare(Map.Entry<Integer, Integer> o1, Map.Entry<Integer, Integer> o2) {
+                if (o1.getValue() != o2.getValue()) {
+                    return -(o1.getValue() - o2.getValue());
+                } else {
+                    return (o1.getKey() - o2.getKey());
+                }
+
+            }
+        });
+        for (int i = 0; i < list.size(); i++) {
+
+            System.out.println(list.get(i).getKey()+" "+list.get(i).getValue());
+        }
+
+
+    }
+
+    public static void main(String[] args) {
+        Scanner keyin = new Scanner(System.in);
+        String in = keyin.nextLine();
+        String[] s = in.split("\\D");
+        int[] num = new int[s.length];
+        for (int i = 0; i < num.length; i++) {
+            num[i] = Integer.valueOf(s[i]);
+        }
+
+        new Practice_1(num);
+    }
+}

@@ -1,0 +1,14 @@
+package homeWork_11_27;
+
+public class SmorkingTeacher extends Teacher{
+
+	public SmorkingTeacher(String name, int age) {
+		super(name, age);
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public void showInfo() {
+		super.showInfo();
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.situ;
+
+public class person {
+	String name = "asad";
+	String sex;
+	int age;
+	public int talk(String name1,String name2) {
+		if(sex.equals(name)) {
+			
+		}
+	}
+}

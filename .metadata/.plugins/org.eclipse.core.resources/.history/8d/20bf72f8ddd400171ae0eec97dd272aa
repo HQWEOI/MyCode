@@ -1,0 +1,32 @@
+package Practice_11_29;
+
+public class EnumDemo {
+	public static final String SPRING = "spring";
+	public static final String SUMMER = "summer";
+	
+	public static final String MAIL = "mail";
+	public static final String FEMALE = "femail";
+	
+ static void main(String[] args) {
+		EnumGender enumGender = EnumGender.MAIL;
+		System.out.println(enumGender);
+		
+		if(enumGender == EnumGender.MAIL) {
+			System.out.println("==");
+		}
+		
+		if(enumGender.equals(EnumGender.MAIL)) {
+			System.out.println("equal");
+		}
+		
+		switch(enumGender) {
+		case MAIL:
+			System.out.println("mail");
+			break;
+		case FEMAIL:
+			System.out.println("femail");
+			break;
+			
+		}
+	}
+}

@@ -1,0 +1,13 @@
+package homeWork_11_27;
+
+public class Test {
+	public static void main(String[] args) {
+		AbstractPerson stu =  new Student("张三",18);
+		stu.showInfo();
+		AbstractPerson stu2 = new SmokingStudent("李四",18);
+		stu2.showInfo();
+		SmokingStudent stu3 = new SmokingStudent("王五", 18);
+		stu3.showInfo();
+		stu3.smoke();
+	}
+}

@@ -1,0 +1,81 @@
+package homeWork_11_27_2;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+
+public class StudentManeger {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		ArrayList<Student> students = new ArrayList<Student>();
+		
+		System.out.println("请输入学生数量");
+		int count = scanner.nextInt();
+		
+		for(int i = 0; i < count; i++) {
+			
+			System.out.println("请输入姓名");
+			String name = scanner.next();
+			System.out.println("请输入年龄");
+			int age = scanner.nextInt();
+			System.out.println("请输入性别");
+			String gender = scanner.next();
+			System.out.println("请输入班级");
+			String className = scanner.next();
+			
+			Student stu = new Student(name, age, className, gender);
+			
+			students.add(stu);
+		}
+		
+		for(int i = 0; i < students.size(); i++) {
+			students.get(i).traverse();
+		}
+		
+		System.out.println("输入1姓名查找学生");
+		System.out.println("输入2年龄查找学生");
+		System.out.println("输入0退出");
+		
+		int num = scanner.nextInt();
+		
+		switch(num) {
+		
+		case 1:
+			System.out.println("请输入要查找的姓名");
+			String nameSearch = scanner.next();
+			boolean isFoundName = false;
+			for(int i = 0; i < students.size(); i++) {
+				if(students.get(i).name.equals(nameSearch)) {
+					students.get(i).traverse();
+					isFoundName = true;
+				}
+			}
+			if(isFoundName == false) {
+				System.out.println("没找到该成员");
+			}
+			break;
+		case 2:
+			System.out.println("请输入要查找的年龄");
+			int ageSearch = scanner.nextInt();
+			boolean isFoundAge = false;
+			for(int i = 0; i < students.size(); i++) {
+				if(students.get(i).age == ageSearch) {
+					students.get(i).traverse();
+					isFoundName = true;
+				}
+			}
+			if(isFoundAge == false) {
+				System.out.println("没找到该成员");
+			}
+			break;
+			
+		case 0:
+			break;
+		}
+		System.out.println("程序结束");
+	}
+	
+}
+
+

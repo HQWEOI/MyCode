@@ -1,0 +1,6 @@
+1511422021713	Rename type 'ClassRoom'
+1511425990758	Extract method 'SeachByName'
+1511426992016	Extract method 'traverseStudents'
+1511427041540	Extract method 'inputStudents'
+1511427248709	Inline method 'SeachByName'
+1511427293270	Extract method 'StudentManager'

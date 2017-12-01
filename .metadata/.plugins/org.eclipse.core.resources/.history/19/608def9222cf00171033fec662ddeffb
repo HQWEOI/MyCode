@@ -1,0 +1,26 @@
+package practice_11_21;
+
+import java.util.Scanner;
+
+public class Practice06 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int[] score = new int[100];
+		int i = 0;
+		int sum = 0;
+		int avg = 0;
+		while(true) {
+			score[i] = scan.nextInt();
+			i++;
+			if(scan.nextInt()==0)
+				break;
+		}
+		
+		for (int j = 0; j < score.length; j++) {
+			sum += score[j]; 
+		}
+		avg = sum/score.length;
+		
+		System.out.println("平均数是" + avg);
+	}
+}
